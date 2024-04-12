@@ -55,7 +55,13 @@ class TestContarVocales (unittest.TestCase):
     def test_contar_matemáticas(self):
         resultado = contar_vocales('matemáticas')
         self.assertEqual(resultado, {'e': 1 , 'i': 1 , 'á': 1 , 'a': 2 })
-
     
+    def test_contar_colibrí(self):
+        resultado = contar_vocales('colibrí')
+        self.assertEqual(resultado, {'o': 1 , 'i': 1 , 'í': 1})
+
+    def test_contar_hincapié(self):
+        resultado = contar_vocales('hincapié')
+        self.assertEqual(resultado, {'a': 1 , 'é': 1 , 'i': 2})
 
 unittest.main()
